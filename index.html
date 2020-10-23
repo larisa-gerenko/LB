@@ -5,12 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="css/media.css">
     <title>ПЭ LB-52U</title>
 </head>
 <body>
-<div>
+<div id="mainForm">
 
     <div class="header">
         <div class="container">
@@ -25,12 +25,12 @@
     <div class="filter">
         <div class="container">
             <div class="price filter__item">
-                <div class="filter__title" >
+                <div class="filter__title">
                     <img src="img/price.png" alt="price">
                     <span>Цена (без НДС)</span>
                 </div>
                 <div>
-                    <button class="filter__button">от 107 ₽/кг  </button>
+                    <label class="filter__label" ><input type="checkbox"> <span class="filter__button">от 107 ₽/кг</span></label>
                 </div>
             </div>
             <div class="caliber filter__item">
@@ -39,10 +39,10 @@
                     <span>Диаметр</span>
                 </div>
                 <div>
-                    <button class="filter__button">2,5 мм </button>
-                    <button class="filter__button">3 мм </button>
-                    <button class="filter__button">4 мм </button>
-                    <button class="filter__button">5 мм </button>
+                    <label class="filter__label" ><input type="checkbox"> <span class="filter__button">2,5 мм</span></label>
+                    <label class="filter__label" ><input type="checkbox"> <span class="filter__button">3 мм</span></label>
+                    <label class="filter__label" ><input type="checkbox"> <span class="filter__button">4 мм</span></label>
+                    <label class="filter__label" ><input type="checkbox"> <span class="filter__button">5 мм</span></label>
                 </div>
             </div>
             <div class="pack filter__item">
@@ -51,14 +51,14 @@
                     <span>Упаковка</span>
                 </div>
                 <div>
-                    <button class="filter__button">1 кг </button>
-                    <button class="filter__button">1,5 кг </button>
-                    <button class="filter__button">2,5 кг </button>
-                    <button class="filter__button">5 кг </button>
+                    <label class="filter__label" ><input type="checkbox"> <span class="filter__button">1 кг</span></label>
+                    <label class="filter__label" ><input type="checkbox"> <span class="filter__button">1,5 кг</span></label>
+                    <label class="filter__label" ><input type="checkbox"> <span class="filter__button">2,5 кг</span></label>
+                    <label class="filter__label" ><input type="checkbox"> <span class="filter__button">5 кг</span></label>
                 </div>
             </div>
             <div class="electrode filter__item">
-                <div class="filter__title" >
+                <div class="filter__title">
                     <img src="img/eletrode.png" alt="eletrode">
                     <span>Тип электродов Э50А</span>
                 </div>
@@ -68,12 +68,30 @@
         </div>
 
         <div class="container">
-            <button class="button">оформить заявку</button>
-
+            <button onclick="showForm()" class="button">оформить заявку</button>
         </div>
         <img src="img/flagman.png" class="flagman"> </img>
     </div>
 
 </div>
+<div id="form">
+    <div class="order">
+        <div class="order__header">
+            <span>заявка на ПЭ LB-52U ГОСТ</span>
+            <img  onclick="closeForm()" class="exit" src="img/exit.svg" alt="exit">
+        </div>
+        <div class="order__form">
+            <div>
+                <input class="input_text" placeholder="Имя" type="text">
+                <input class="input_text" placeholder="Телефон"  type="text">
+                <input class="input_text" placeholder="Email" type="email">
+
+            </div>
+            <div class="checkbox"><input  type="checkbox"> <span class="checkbox__text">Даю согласие на обработку персональных данных</span> </div>
+            <button class="send" >Отправить</button>
+        </div>
+    </div>
+</div>
+<script src="js/script.js"></script>
 </body>
 </html>

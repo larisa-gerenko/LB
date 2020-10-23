@@ -1,9 +1,9 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .container {
-    width: 700px;
+    width: 680px;
   }
   .filter {
-    height: 380px;
+    height: 370px;
   }
   .filter .container {
     display: flex;
@@ -11,17 +11,21 @@
     flex-wrap: wrap;
   }
   .flagman {
-    left: 430px;
+    left: 410px;
     top: 216px;
+  }
+  .filter__item {
+    width: 50%;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .container {
     width: 350px;
   }
   .filter {
     height: 600px;
+    padding-top: 180px;
   }
   .filter .container {
     display: flex;
@@ -29,7 +33,32 @@
     flex-wrap: wrap;
   }
   .flagman {
-    left: 430px;
-    top: 216px;
+    width: 90%;
+    height: auto;
+    left: 20px;
+    top: 20px;
+  }
+  .filter__item {
+    width: 100%;
+  }
+  .button {
+    height: 60px;
+    width: 100%;
+  }
+  .header .container {
+  }
+  .header .container {
+    flex-wrap: wrap;
+  }
+  .header__title {
+    font-size: 22px;
+    width: 100%;
+  }
+  .hit {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .send {
+    width: 85%;
   }
 }
